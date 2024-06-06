@@ -6,8 +6,25 @@ package ru.netology.study;
 // Здесь мы его получили в той версии, в которой он был записан в классе Product.
 // Например, можем изменить сумму, по которой мы считаем книгу дорогой или нет.
 
+// Переопределённый метод класса Product определяющий является ли товар дорогим.
+// Главное не ошибиться в названии метода, иначе он будет считаться новым методом, не переопределённым.
+// @Override - аннотация, которая позволит понять, что метод определён в наследуемом классе.
+
 public class Book extends Product {
     private String author;
+    private int pages;
+    private int publishedYear;
+
+    // Конструкторы при наследовании.
+
+    public Book(int id, String name, int price, String author, int pages, int publishedYear) {
+        super(id, name, price);  // super - вызов родительского конструктора.
+        this.author = author;
+        this.pages = pages;
+        this.publishedYear = publishedYear;
+    }
+
+    // Геттеры и сеттеры.
 
     public int getPublishedYear() {
         return publishedYear;
@@ -33,12 +50,7 @@ public class Book extends Product {
         this.author = author;
     }
 
-    private int pages;
-    private int publishedYear;
-
-    // Переопределённый метод класса Product определяющий является ли товар дорогим.
-    // Главное не ошибиться в названии метода, иначе он будет считаться новым методом, не переопределённым.
-    // @Override - аннотация, которая позволит понять, что метод определён в наследуемом классе.
+    // Методы.
 
     @Override
     public boolean isTooExpensive() {
@@ -48,4 +60,5 @@ public class Book extends Product {
             return false;
         }
     }
+
 }

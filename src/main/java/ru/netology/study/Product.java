@@ -1,13 +1,25 @@
 package ru.netology.study;
 
-// 1.1. Наследование.
-// 1.2. Класс Product - общий класс, описывающий общую логику для всех товаров.
+// Наследование.
+// Класс Product - общий класс, описывающий общую логику для всех товаров.
 // В Product размещаем данные релевантные для каждого типа товаров.
 // Для того чтобы наследный класс, например, Book, мог получить доступ к этим данным,
 // данные должны быть protected, а не private.
 
 public class Product {
     protected int id;
+    protected String name;
+    protected int price;
+
+    // Конструкторы при наследовании.
+
+    public Product(int id, String name, int price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
+    // Геттеры и сеттеры.
 
     public int getId() {
         return id;
@@ -33,10 +45,8 @@ public class Product {
         this.price = price;
     }
 
-    protected String name;
-    protected int price;
+    // Методы.
 
-    // Метод определяющий является ли товар дорогим.
     public boolean isTooExpensive() {
         if (price > 1_000_000) {
             return true;
