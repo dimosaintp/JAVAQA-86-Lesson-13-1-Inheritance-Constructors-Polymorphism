@@ -41,4 +41,11 @@ public class TShirt extends Product {
             return false;
         }
     }
+
+    // Полиморфизм. Методы.
+
+    @Override
+    public void use() {
+        System.out.println("Носим футболку " + name);
+    }
 }

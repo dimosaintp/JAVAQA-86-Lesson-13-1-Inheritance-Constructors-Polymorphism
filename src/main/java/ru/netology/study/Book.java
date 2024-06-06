@@ -61,4 +61,10 @@ public class Book extends Product {
         }
     }
 
+    // Полиморфизм. Методы.
+
+    @Override
+    public void use() {
+        System.out.println("Читаем книгу " + name);
+    }
 }

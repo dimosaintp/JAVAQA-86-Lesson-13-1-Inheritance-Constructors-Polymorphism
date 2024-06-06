@@ -55,4 +55,10 @@ public class Product {
         }
 
     }
+
+    // Полиморфизм. Методы.
+
+    public void use( ) {
+        System.out.println("Продукт " + name + " используется.");
+    }
 }

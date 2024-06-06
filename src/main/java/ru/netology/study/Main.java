@@ -2,7 +2,7 @@ package ru.netology.study;
 
 public class Main {
     public static void main(String[] args) {
-        Book book = new Book(
+        Product book = new Book(
                 1,
                 "The Great Gatsby",
                 10_000,
@@ -11,7 +11,7 @@ public class Main {
                 1925
         );
 
-        TShirt tShirt = new TShirt(
+        Product tShirt = new TShirt(
                 2,
                 "Boss",
                 15_000,
